@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{933D5065-7F41-4509-8C50-AA3C3EB66B35}"
+	ProjectSection(SolutionItems) = preProject
+		src\Others\commandline.txt = src\Others\commandline.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSlice.Core", "src\DataSlice.Core\DataSlice.Core.csproj", "{D3043FBA-3FB9-4AC3-8538-773B8E0C9122}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSlice", "src\DataSlice\DataSlice.csproj", "{99882E4C-D581-4D28-AA4E-8120963832E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperForm", "src\HelperForm\HelperForm.csproj", "{35D0335F-FC3A-4306-8116-D1141DB0DE30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataModels", "DataModels", "{DBFF15B9-3196-4007-8E68-D0DCE169E9E0}"
+	ProjectSection(SolutionItems) = preProject
+		datamodels\Admin.model.json = datamodels\Admin.model.json
+		datamodels\Admin.schema.json = datamodels\Admin.schema.json
+		datamodels\Auditing.model.json = datamodels\Auditing.model.json
+		datamodels\Auditing.schema.json = datamodels\Auditing.schema.json
+		datamodels\BIDWH.model.json = datamodels\BIDWH.model.json
+		datamodels\BIDWH.schema.json = datamodels\BIDWH.schema.json
+		datamodels\BIDWH_Stg.model.json = datamodels\BIDWH_Stg.model.json
+		datamodels\BIDWH_Stg.schema.json = datamodels\BIDWH_Stg.schema.json
+		datamodels\Cedar.model.json = datamodels\Cedar.model.json
+		datamodels\Cedar.schema.json = datamodels\Cedar.schema.json
+		datamodels\ContentManagerV2.model.json = datamodels\ContentManagerV2.model.json
+		datamodels\ContentManagerV2.schema.json = datamodels\ContentManagerV2.schema.json
+		datamodels\DBAdmin.schema.json = datamodels\DBAdmin.schema.json
+		datamodels\DBAdmin_generated.model.json = datamodels\DBAdmin_generated.model.json
+		datamodels\DMD_Import.model.json = datamodels\DMD_Import.model.json
+		datamodels\DMD_Import.schema.json = datamodels\DMD_Import.schema.json
+		datamodels\DMD_Import_generated.model.json = datamodels\DMD_Import_generated.model.json
+		datamodels\emisDataResource.schema.json = datamodels\emisDataResource.schema.json
+		datamodels\emisDataResource_generated.model.json = datamodels\emisDataResource_generated.model.json
+		datamodels\Logging.schema.json = datamodels\Logging.schema.json
+		datamodels\Logging_generated.model.json = datamodels\Logging_generated.model.json
+		datamodels\MDDF_Import.model.json = datamodels\MDDF_Import.model.json
+		datamodels\MDDF_Import.schema.json = datamodels\MDDF_Import.schema.json
+		datamodels\MessageArchive.schema.json = datamodels\MessageArchive.schema.json
+		datamodels\MessageArchive_generated.model.json = datamodels\MessageArchive_generated.model.json
+		datamodels\ProductData.schema.json = datamodels\ProductData.schema.json
+		datamodels\ProductData_generated.model.json = datamodels\ProductData_generated.model.json
+		datamodels\ScriptSwitch.model.json = datamodels\ScriptSwitch.model.json
+		datamodels\ScriptSwitch.schema.json = datamodels\ScriptSwitch.schema.json
+		datamodels\ScriptSwitchDrugData.schema.json = datamodels\ScriptSwitchDrugData.schema.json
+		datamodels\ScriptSwitchDrugData_generated.model.json = datamodels\ScriptSwitchDrugData_generated.model.json
+		datamodels\SoftwareManagement.model.json = datamodels\SoftwareManagement.model.json
+		datamodels\SoftwareManagement.schema.json = datamodels\SoftwareManagement.schema.json
+	EndProjectSection
+	ProjectSection(FolderGlobals) = preProject
+		__JSONSchema = 
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{39C535FD-105E-4DE5-BC27-5B0272C3F1CB}"
+	ProjectSection(SolutionItems) = preProject
+		src\Others\Delete_All_Records.sql = src\Others\Delete_All_Records.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSlice.Core.Tests", "src\DataSlice.Core.Tests\DataSlice.Core.Tests\DataSlice.Core.Tests.csproj", "{6E68B5A6-44FC-41C8-9A79-07ECE939ED54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3043FBA-3FB9-4AC3-8538-773B8E0C9122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3043FBA-3FB9-4AC3-8538-773B8E0C9122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3043FBA-3FB9-4AC3-8538-773B8E0C9122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3043FBA-3FB9-4AC3-8538-773B8E0C9122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99882E4C-D581-4D28-AA4E-8120963832E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99882E4C-D581-4D28-AA4E-8120963832E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99882E4C-D581-4D28-AA4E-8120963832E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99882E4C-D581-4D28-AA4E-8120963832E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D0335F-FC3A-4306-8116-D1141DB0DE30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D0335F-FC3A-4306-8116-D1141DB0DE30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D0335F-FC3A-4306-8116-D1141DB0DE30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D0335F-FC3A-4306-8116-D1141DB0DE30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E68B5A6-44FC-41C8-9A79-07ECE939ED54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E68B5A6-44FC-41C8-9A79-07ECE939ED54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E68B5A6-44FC-41C8-9A79-07ECE939ED54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E68B5A6-44FC-41C8-9A79-07ECE939ED54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39C535FD-105E-4DE5-BC27-5B0272C3F1CB} = {933D5065-7F41-4509-8C50-AA3C3EB66B35}
+	EndGlobalSection
+EndGlobal

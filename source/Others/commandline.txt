@@ -1,0 +1,38 @@
+/wipedatabases=All
+
+/generateschema=All /dest=C:\temp\subset\models
+
+/generateschema=DMD_Import /dest=C:\temp\subset\models
+
+/generateschema=ContentManagerV2 /dest=C:\temp\subset\models
+
+/generateschema=Cedar /dest=C:\temp\subset\models
+
+/generateschema=MDDF_Import /dest=C:\temp\subset\models
+
+/generateschema=MDDF_Import /dest=C:\temp\subset\models
+
+/generateschema=Admin /dest=C:\temp\subset\models
+/generateschema=ScriptSwitch /dest=C:\temp\subset\models
+/generateschema=Auditing /dest=C:\temp\subset\models
+/generateschema=Bidwh /dest=C:\temp\subset\models
+/generateschema=Bidwh_Stg /dest=C:\temp\subset\models
+/generateschema=Auditing /dest=C:\temp\subset\models
+
+
+/subset=SoftwareManagement /modelfolder=C:\temp\subset\models
+/subset=DMD_Import /modelfolder=C:\temp\subset\models
+/subset=ContentManagerV2 /modelfolder=C:\temp\subset\models
+/subset=MDDF_Import /modelfolder=C:\temp\subset\models
+/subset=Admin /modelfolder=C:\temp\subset\models
+/subset=ScriptSwitch /modelfolder=C:\temp\subset\models
+/subset=Bidwh /modelfolder=C:\temp\subset\models
+/subset=Bidwh_Stg /modelfolder=C:\temp\subset\models
+/subset=Auditing /modelfolder=C:\temp\subset\models
+/subset=Cedar /modelfolder=C:\scriptswitch\DevTools\DataSubsetting\trunk\datamodels
+
+/mergemodel /source=C:\DevExamp\DataSlice\Models\SoftwareManagement-model.json /dest=C:\temp\subset\models\SoftwareManagement_generated.model.json /newfile=C:\temp\subset\models\SoftwareManagement.model.json
+
+/mergemodel /source=C:\temp\subset\models\DMD_Import.model.json /dest=C:\temp\subset\models\DMD_Import_generated.model.json /newfile=C:\temp\subset\models\DMD_Import-new.model.json
+
+/backup=SoftwareManagement

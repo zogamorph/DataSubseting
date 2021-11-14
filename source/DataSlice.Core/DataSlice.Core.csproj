@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3043FBA-3FB9-4AC3-8538-773B8E0C9122}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataSlice.Core</RootNamespace>
+    <AssemblyName>DataSlice.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="Column.cs" />
+    <Compile Include="CreateTables.cs" />
+    <Compile Include="Databackup\DatabaseBackupService.cs" />
+    <Compile Include="Databackup\IDatabaseBackupService.cs" />
+    <Compile Include="DataExtractLimit.cs" />
+    <Compile Include="DataExtractModel.cs" />
+    <Compile Include="DataWiping\DataWipeManager.cs" />
+    <Compile Include="DataWiping\DataWiper.cs" />
+    <Compile Include="DataWiping\IDataWipeManager.cs" />
+    <Compile Include="Dependency.cs" />
+    <Compile Include="DependencyInfo.cs" />
+    <Compile Include="ExtractCriteria.cs" />
+    <Compile Include="ExtractParameter.cs" />
+    <Compile Include="Factory\IResolvable.cs" />
+    <Compile Include="Factory\IServiceLocator.cs" />
+    <Compile Include="Factory\ServiceLocator.cs" />
+    <Compile Include="Generation\IIndexManager.cs" />
+    <Compile Include="Generation\IMigrationQueryGenerator.cs" />
+    <Compile Include="Generation\IndexManager.cs" />
+    <Compile Include="Generation\ISubsetService.cs" />
+    <Compile Include="Generation\MigrationQueryGenerator.cs" />
+    <Compile Include="Generation\SqlMigrationQueryGenerator.cs" />
+    <Compile Include="Generation\SubsetManager.cs" />
+    <Compile Include="Generation\SubsetService.cs" />
+    <Compile Include="Generation\TopoSortHelper.cs" />
+    <Compile Include="IAppSettings.cs" />
+    <Compile Include="IDataWiper.cs" />
+    <Compile Include="InvalidParameterException.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="Schema.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchemaExtractionException.cs" />
+    <Compile Include="SchemaGeneration\IModelMerge.cs" />
+    <Compile Include="SchemaGeneration\ISchemaGenerator.cs" />
+    <Compile Include="SchemaGeneration\ISchemaRepository.cs" />
+    <Compile Include="SchemaGeneration\ModelMerge.cs" />
+    <Compile Include="SchemaGeneration\SchemaGenerator.cs" />
+    <Compile Include="SchemaGeneration\SchemaRepository.cs" />
+    <Compile Include="Settings\DatabasesToSubsetConfiguration.cs" />
+    <Compile Include="Settings\DatabasesToSubsetSettings.cs" />
+    <Compile Include="Settings\DatabaseToSubset.cs" />
+    <Compile Include="Settings\IDatabasesToSubsetSettings.cs" />
+    <Compile Include="SourceQueryGenerator.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="TableExtract.cs" />
+    <Compile Include="Transfer\AsyncSqlServerTableTransfer.cs" />
+    <Compile Include="Transfer\DatabaseSubset.cs" />
+    <Compile Include="Transfer\IAsyncSqlServerTableTransfer.cs" />
+    <Compile Include="Transfer\ISqlServerTableTransfer.cs" />
+    <Compile Include="Transfer\SqlServerTableTransfer.cs" />
+    <Compile Include="Utils\LocationHelper.cs" />
+    <Compile Include="Utils\IAppLogger.cs" />
+    <Compile Include="Utils\ReplaceString.cs" />
+    <Compile Include="Utils\StringyTypeHelper.cs" />
+    <Compile Include="Utils\TableToDependencyObjectMapper.cs" />
+    <Compile Include="Utils\TopologicalSort.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
