@@ -12,6 +12,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  OutputRootFolder: '$(Build.ArtifactStagingDirectory)\Artifact'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -23,7 +24,7 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
-    msbuildArgs: ' /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\DataSubsetting.zip" /p:DeployIisAppPath="Default Web Site"'
+    msbuildArgs: '/p:OutputPath=$(OutputRootFolder)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     rstoreNugetPackages: true
@@ -37,5 +38,4 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: '$(build.artifactStagingDirectory)\DataSubsetting.zip'
-    publishLocation: 'DataSubSetting'
+    ArtifactName: 'DataSubSetting'
