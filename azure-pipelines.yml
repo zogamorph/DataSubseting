@@ -38,4 +38,4 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: '$(build.artifactStagingDirectory)\DataSubsetting.zip'
-    publishLocation: 'Container'
+    publishLocation: 'DataSubSetting'
